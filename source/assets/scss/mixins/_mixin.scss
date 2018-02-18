@@ -1,0 +1,94 @@
+// Mixins
+// --------------------------------------------------
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+          border-color: darken($border, 25%);
+    }
+  }
+  &:active,
+  &.active {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+}
+
+@mixin img-responsive($display: block) {
+  display: $display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+@mixin list-styled() {
+  list-style-type: none;
+  position: relative;
+  margin-left: 1.1em;
+  padding-left: 0;
+  li {
+    position: relative;
+    &:before {
+      content: "\2022";
+      position: absolute;
+      left: -1.1em;
+      margin-right: 5px;
+      color: $gray-darker;
+    }
+  }
+}
+
+@mixin list-styled-numeric(){
+  list-style-type: none;
+  counter-reset: item;
+  padding-left: 0;
+  li {
+    margin-bottom: 18px;
+  }
+  > li {
+    &:before {
+      content: counters(item,".") " ";
+      counter-increment: item;
+      font-family: $font-avenir-demi;
+      color: $color-list-num;
+    }
+  }
+  ol ol {
+    margin-left: 1.8em;
+  }
+}

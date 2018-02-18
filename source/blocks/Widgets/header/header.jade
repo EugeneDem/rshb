@@ -1,0 +1,14 @@
+header
+	.wrapper
+		.header
+			a.header-brand(href="#")
+				.header-brand__img
+					img(src="assets/images/brand.jpg" alt="Россельхозбанк")
+				.header-brand__title Группа АО&nbsp;“Россельхозбанк”
+			.phone
+				.phone__name Бесплатный звонок по&nbsp;России
+				a.phone__number(href="callto:88007004560") 8 800 700 45 60
+		nav.navbar
+			each value, ind in HEADER.navbar
+				.navbar__item(class=(value.page === page) ? "is-active" : "")
+					a.navbar__link(href=value.url)!= value.title

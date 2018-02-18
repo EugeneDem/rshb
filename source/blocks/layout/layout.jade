@@ -1,0 +1,22 @@
+include ../scripts/scripts
+
+doctype html
+html(lang='ru')
+	block analitics
+		-var connonicalPage = '';
+	include ../head/head
+	body
+		#app.app
+			.app__wrap
+				.app__content
+					// start header
+					block header
+						include ../Widgets/header/header
+					// end header
+					block content
+				.app__footer
+					block footer
+						include ../Widgets/footer/footer
+		+scripts(['vendor/jquery-3.2.1.min.js', 'vendor/bootstrap.min.js', 'vendor/jquery.nicescroll.min.js', 'vendor/slick.js'])
+		block scripts
+		script(src="assets/js/main.js")

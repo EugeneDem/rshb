@@ -1,0 +1,35 @@
+.app {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: relative;
+
+    &__wrap {
+        width: 100%;
+        height: 100%;
+        display: table;
+    }
+
+    &__content {
+        height: 100%;
+        display: table-row;
+    }
+
+    &__footer {
+        position: relative;
+    }
+}
+
+.wrapper {
+    max-width: 1140px + $grid-gutter-width;
+    min-width: 320px;
+    margin: 0 auto;
+    padding-left: ceil($grid-gutter-width / 2);
+    padding-right: floor($grid-gutter-width / 2);
+    box-sizing: border-box;
+
+    @media #{$smallPhone} {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

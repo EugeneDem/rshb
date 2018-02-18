@@ -1,0 +1,38 @@
+block page
+	-var page = "main";
+
+extends ../blocks/layout/layout
+
+block content
+	.wrapper
+		.promo-text
+			h1.promo-text__title РСХБ-Страхование жизни:
+			h3.promo-text__subtitle накопительное и&nbsp;инвестиционное страхование жизни, защита жизни и&nbsp;здоровья, накопления на&nbsp;пенсию, сбережения для детей, семейный капитал
+		.promo-block-list
+			.promo-block-list__item
+				a.promo-block(href="#")
+					.promo-block__wrap-img
+						.promo-block__title О&nbsp;нас
+						img.promo-block__img(src="/content/images/img-1.png" alt="")
+					.promo-block__content
+						.promo-block__link О&nbsp;компании
+							span.promo-block__link-arrow
+			.promo-block-list__item
+				a.promo-block(href="#")
+					.promo-block__wrap-img
+						.promo-block__title Найти офис
+						img.promo-block__img(src="/content/images/img-1.png" alt="")
+					.promo-block__content
+						.promo-block__link Ближайший офис
+							span.promo-block__link-arrow
+		.brand-list
+			.brand-list__group.brand-list__group_left
+				.brand-list__item
+					img.brand-list__img(src="/content/images/logo/img-1.png", alt="")
+				.brand-list__item
+					img.brand-list__img(src="/content/images/logo/img-2.png", alt="")
+			.brand-list__group.brand-list__group_right
+				.brand-list__item
+					img.brand-list__img(src="/content/images/logo/img-4.png", alt="")
+				.brand-list__item
+					img.brand-list__img(src="/content/images/logo/img-3.png", alt="")

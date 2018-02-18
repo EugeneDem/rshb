@@ -1,0 +1,36 @@
+// media queries
+$screen-xs-min: 480px !default;
+$screen-sm-min: 760px !default;
+$screen-md-min: 960px !default;
+$screen-lg-min: 1280px !default;
+
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+
+
+$laptop: screen and (max-width: $screen-md-max);
+$tablet: screen and (max-width: $screen-sm-max);
+$phone: screen and (max-width: $screen-xs-max);
+$smallPhone: screen and (max-width: $screen-xs-min);
+
+//== Grid
+$grid-gutter-width: 30px !default;
+$grid-columns: 12 !default;
+
+//== Typography
+$font-path: "../fonts/" !default;
+$font-opensans: "OpenSans" !default;
+$font-opensans-bold: "OpenSans-Bold" !default;
+$font-opensans-light: "OpenSans-Light" !default;
+$font-opensans-semibold: "OpenSans-SemiBold" !default;
+$font-opensans-extrabold: "OpenSans-ExtraBold" !default;
+
+$font-family-default: Arial, Helvetica, sans-serif !default;
+$font-size-base: 16px;
+
+//Colors
+$colorPlaceholder: #d2d2d2 !default;
+
+//== Sprites svg
+$mq-base-font-size: 16px !default;

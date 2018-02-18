@@ -1,0 +1,68 @@
+$sprites: (
+	"icon-home-focus": (
+		normal: (
+			x: 0,
+			y: 0,
+			width: 20,
+			height: 19,
+			image: "sprites.png",
+			total_width: 42,
+			total_height: 40,
+		),
+		retina: (
+			x: 0,
+			y: 0,
+			width: 40,
+			height: 38,
+			image: "sprites_2x.png",
+			total_width: 84,
+			total_height: 80,
+		),
+	),
+	"icon-home-hover": (
+		normal: (
+			x: 22,
+			y: 0,
+			width: 20,
+			height: 19,
+			image: "sprites.png",
+			total_width: 42,
+			total_height: 40,
+		),
+		retina: (
+			x: 44,
+			y: 0,
+			width: 40,
+			height: 38,
+			image: "sprites_2x.png",
+			total_width: 84,
+			total_height: 80,
+		),
+	),
+	"icon-home": (
+		normal: (
+			x: 0,
+			y: 21,
+			width: 20,
+			height: 19,
+			image: "sprites.png",
+			total_width: 42,
+			total_height: 40,
+		),
+		retina: (
+			x: 0,
+			y: 42,
+			width: 40,
+			height: 38,
+			image: "sprites_2x.png",
+			total_width: 84,
+			total_height: 80,
+		),
+	),
+);
+
+@each $name in map-keys($sprites) {
+	.sprite-#{$name} {
+		@include sprite($name);
+	}
+}

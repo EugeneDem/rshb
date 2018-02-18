@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: rem(84);
+    padding-bottom: rem(41);
+}
+
+.header-brand {
+    display: inline-block;
+    text-decoration: none;
+
+    &__title {
+        color: #255f34;
+        font-family: $font-opensans-bold;
+        font-size: rem(21);
+        padding-top: 2px;
+    }
+}
+
+.phone {
+    color: #255f34;
+    font-size: rem(24);
+
+    &__name {
+        font-family: $font-opensans-light;
+    }
+
+    &__number {
+        font-family: $font-opensans-bold;
+        color: inherit;
+        text-decoration: none;
+    }
+}

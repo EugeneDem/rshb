@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+
+    @media #{$laptop} {
+        font-size: 14px;
+    }
+
+    @media #{$tablet} {
+        font-size: 12px;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-family: $font-opensans;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+p {
+    margin: 0 0 0.75rem;
+}
+
+h1, .h1 {
+    font-size: rem(56);
+    font-weight: normal;
+    margin: 0 0 rem(32);
+}
+
+h2, .h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin: 0 0 1.4rem;
+}
+
+h3, .h3 {
+    font-size: rem(24);
+    font-weight: normal;
+    margin: 0 0 rem(22);
+}
+
+h4, .h4 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin: 0 0 1rem;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+a:focus {
+    outline: none;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+@include placeholder($colorPlaceholder);
