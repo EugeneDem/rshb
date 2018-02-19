@@ -217,5 +217,3 @@ $(function() {
 	productZoomCarousel.init();
 	initPhotoSwipeFromDOM('.product-zoom');
 });
-
-//# sourceMappingURL=main.js.map
