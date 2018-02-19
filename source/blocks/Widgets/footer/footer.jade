@@ -2,6 +2,49 @@ footer
 	.wrapper
 		.footer
 			.footer__top
+				.footer-list-group
+					each value, ind in FOOTER.navbar
+						ul.footer-list
+							each list in value.list
+								li.footer-list__item
+									a.footer-list__link(href=list.url)!= list.title
+				
+				.services-list-group
+					.services-item
+						a.services-item__wrap-icon(href="#")
+							span.services-item__icon.services-item__icon_call
+						p.services-item__name Позвоните нам
+					.services-item
+						a.services-item__wrap-icon(href="#")
+							span.services-item__icon.services-item__icon_mail
+						p.services-item__name Напишите нам
+				
+				.footer-social
+					.footer-social__title Поделиться в&nbsp;соцсетях
+					.footer-social__wrap
+						.footer-social__wrap-item
+							a.footer-social__item.footer-social__item_fb(href="#")
+								span.footer-social__icon
+								span.footer-social__name Facebook
+						.footer-social__wrap-item
+							a.footer-social__item.footer-social__item_tw(href="#")
+								span.footer-social__icon
+								span.footer-social__name Twitter
+						.footer-social__wrap-item
+							a.footer-social__item.footer-social__item_vk(href="#")
+								span.footer-social__icon
+								span.footer-social__name ВКонтакте
+			.brand-list
+				.brand-list__group.brand-list__group_left
+					.brand-list__item
+						img.brand-list__img(src="content/images/logo/img-1.png", alt="")
+					.brand-list__item
+						img.brand-list__img(src="content/images/logo/img-2.png", alt="")
+				.brand-list__group.brand-list__group_right
+					.brand-list__item
+						img.brand-list__img(src="content/images/logo/img-4.png", alt="")
+					.brand-list__item
+						img.brand-list__img(src="content/images/logo/img-3.png", alt="")
 			.footer__bottom
 				.footer__bottom-item
 					.footer-copyright &copy;&nbsp;2011-2016  ООО<b>«РСХБ-Страхование жизни»</b>

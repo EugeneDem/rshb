@@ -1,6 +1,16 @@
 .footer {
     margin-top: 20px;
 
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        @media #{$phone} {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
     &__bottom {
         display: flex;
         justify-content: space-between;
@@ -18,6 +28,290 @@
         }
     }
 }
+
+.footer-list-group {
+    @include clearfix();
+    flex-basis: 390px;
+
+    @media #{$phone} {
+        flex-basis: auto;
+    }
+}
+
+.footer-list {
+    margin: 0;
+    padding-left: 10px;
+    list-style: none;
+    float: left;
+
+    &__link {
+        color: #000;
+        font-family: $font-opensans-light;
+        font-size: rem(16);
+        display: inline-block;
+        padding-top: rem(8);
+        padding-bottom: rem(8);
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.services-list-group {
+    display: flex;
+    justify-content: center;
+    width: percentage(6 / 12);
+
+    @media #{$phone} {
+        width: 100%;
+        order: -1;
+        margin-bottom: 20px;
+    }
+}
+
+.services-item {
+    width: 168px;
+    text-align: center;
+
+    &__wrap-icon {
+        border: 1px solid #499e2b;
+        background-color: #a6ce39;
+        border-radius: 50%;
+        transition: background-color 0.3s ease 0s;
+        width: rem(100);
+        height: rem(100);
+        display: inline-block;
+        position: relative;
+
+        &:hover {
+            background-color: #ffe582;
+        }
+    }
+
+    &__icon {
+        transform: translate(-50%, -50%);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
+
+    &__icon_call {
+        @include sprite("icon_services-call");
+
+        @media #{$tablet} {
+            @include sprite("icon_services-call-small");
+        }
+    }
+
+    &__icon_mail {
+        @include sprite("icon_services-mail");
+
+        @media #{$tablet} {
+            @include sprite("icon_services-mail-small");
+        }
+    }
+
+    &__wrap-icon:hover &__icon_call {
+        @include sprite("icon_services-call-hover");
+
+        @media #{$tablet} {
+            @include sprite("icon_services-call-hover-small");
+        }
+    }
+
+    &__wrap-icon:hover &__icon_mail {
+        @include sprite("icon_services-mail-hover");
+
+        @media #{$tablet} {
+            @include sprite("icon_services-mail-hover-small");
+        }
+    }
+
+    &__name {
+        color: #000;
+        text-transform: uppercase;
+        font-size: rem(14);
+        margin-top: rem(16);
+    }
+}
+
+.footer-list + .footer-list {
+    margin-left: 15px;
+}
+
+.footer-social {
+
+    @media #{$phone} {
+        margin-left: 30px;
+    }
+
+    &__title {
+        color: #000;
+        font-size: rem(14);
+        font-family: $font-opensans-bold;
+    }
+
+    &__wrap {
+        padding-top: 11px;
+    }
+
+    &__wrap-item {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 38px;
+        display: inline-block;
+        color: #000;
+        text-decoration: none;
+    }
+
+    &__item:hover &__name {
+        text-decoration: underline;
+    }
+
+    &__item_fb &__icon {
+        background-color: #00569e;
+    }
+ 
+    &__item_fb:hover &__icon {
+        background-color: lighten(#00569e, 5%);
+    }
+
+    &__item_tw &__icon {
+        background-color: #00aff5;
+    }
+
+    &__item_tw:hover &__icon {
+        background-color: lighten(#00aff5, 5%);
+    }
+
+    &__item_vk &__icon {
+        background-color: #006691;
+    }
+
+    &__item_vk:hover &__icon {
+        background-color: lighten(#006691, 5%);
+    }
+    
+    &__item_fb &__icon:before {
+        background-image: url("icon_social-fb.svg#datauri");
+    }
+
+    &__item_tw &__icon:before {
+        background-image: url("icon_social-tw.svg#datauri");
+    }
+
+    &__item_vk &__icon:before {
+        background-image: url("icon_social-vk.svg#datauri");
+    }
+
+    &__icon {
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        transition: background-color 0.3s ease 0s;
+        transform: translateY(-50%);
+        position: absolute;
+        left: 0;
+        top: 50%;
+
+        &:before {
+            content: "";
+            background: none no-repeat 50% 50%;
+            width: 10px;
+            height: 10px;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+    }
+
+    &__name {
+        font-size: 14px;
+    }
+}
+
+.brand-list {
+    @include clearfix();
+    margin-top: rem(56);
+    margin-bottom: rem(56);
+
+    @media #{$phone} {
+        padding-left: ceil($grid-gutter-width / 2);
+        padding-right: floor($grid-gutter-width / 2);
+    }
+
+    &__group {
+        @media #{$phone} {
+            display: flex;
+        }
+    }
+
+    &__group_left {
+        width: percentage(652 / 1140);
+        float: left;
+
+        @media #{$phone} {
+            width: 100%;
+            float: none;
+        }
+    }
+
+    &__group_left &__item {
+        max-width: 42%;
+        float: left;
+
+        @media #{$phone} {
+            float: none;
+        }
+    }
+
+    &__group_left &__item + &__item {
+        margin-left: percentage(100 / 652);
+    }
+
+    &__group_right {
+        width: percentage((1140 - 652) / 1140);
+        float: right;
+
+        @media #{$phone} {
+            margin-top: 20px;
+            width: 100%;
+            float: none;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+    }
+
+    &__group_right &__item {
+        max-width: 42%;
+        float: right;
+
+        @media #{$phone} {
+            float: none;
+        }
+
+        &:first-child {
+            max-width: 28%;
+            margin-left: percentage(54 / 410);
+
+            @media #{$phone} {
+                max-width: 22%;
+            }
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 .footer-copyright {
     font-size: 12.4px;
 
