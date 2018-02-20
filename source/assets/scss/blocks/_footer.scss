@@ -1,5 +1,11 @@
 .footer {
     margin-top: 20px;
+    margin-bottom: 20px;
+
+    @media #{$phone} {
+        padding-left: ceil($grid-gutter-width / 2);
+        padding-right: floor($grid-gutter-width / 2);
+    }
 
     &__top {
         display: flex;
@@ -15,16 +21,14 @@
         display: flex;
         justify-content: space-between;
 
-        @media #{$laptop} {
-            flex-direction: column;
+        @media #{$tablet} {
+            flex-wrap: wrap;
+            justify-content: center;
         }
-    }
 
-    &__bottom-item_location {
-        max-width: 600px;
-
-        @media #{$laptop} {
-            order: 1;
+        @media #{$phone} {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
@@ -73,6 +77,14 @@
 .services-item {
     width: 168px;
     text-align: center;
+
+    @media #{$phone} {
+        width: 150px;
+    }
+
+    @media #{$smallPhone} {
+        width: 130px;
+    }
 
     &__wrap-icon {
         border: 1px solid #499e2b;
@@ -141,19 +153,33 @@
 }
 
 .footer-social {
+    min-width: rem(174);
 
     @media #{$phone} {
         margin-left: 30px;
+    }
+
+    @media #{$smallPhone} {
+        margin-left: 0;
     }
 
     &__title {
         color: #000;
         font-size: rem(14);
         font-family: $font-opensans-bold;
+
+        @media #{$smallPhone} {
+            display: none;
+        }
     }
 
     &__wrap {
         padding-top: 11px;
+
+        @media #{$smallPhone} {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     &__wrap-item {
@@ -167,6 +193,12 @@
         display: inline-block;
         color: #000;
         text-decoration: none;
+
+        @media #{$smallPhone} {
+            padding-left: 25px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
     }
 
     &__item:hover &__name {
@@ -233,6 +265,10 @@
 
     &__name {
         font-size: 14px;
+
+        @media #{$phone} {
+            font-size: 12px;
+        }
     }
 }
 
@@ -241,9 +277,9 @@
     margin-top: rem(56);
     margin-bottom: rem(56);
 
-    @media #{$phone} {
-        padding-left: ceil($grid-gutter-width / 2);
-        padding-right: floor($grid-gutter-width / 2);
+    @media #{$smallPhone} {
+        margin-top: rem(36);
+        margin-bottom: rem(36);
     }
 
     &__group {
@@ -321,23 +357,55 @@
 }
 
 .footer-location {
+    width: percentage(700 / 1140);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    @media #{$tablet} {
+        width: 100%;
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    @media #{$smallPhone} {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 
     &__address {
         flex-basis: 60%;
         font-size: 12.4px;
         position: relative;
         padding-left: 52px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        @media #{$phone} {
+            flex-basis: auto;
+            width: 50%;
+        }
+
+        @media #{$smallPhone} {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 15px;
+            padding-left: 40px;
+        }
 
         &:before {
             content: "";
-            background-image: url("icon-map.png#datauri");
+            background: url("icon-map.png#datauri") no-repeat 0 0;
             width: 36px;
             height: 36px;
             position: absolute;
             left: 0;
             top: 0;
+
+            @media #{$smallPhone} {
+                background-size: contain;
+                width: 28px;
+                height: 28px;
+            }
         }
     }
 
@@ -350,6 +418,15 @@
         font-size: 12.4px;
         position: relative;
         padding-left: 56px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        @media #{$smallPhone} {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 15px;
+            padding-left: 40px;
+        }
 
         &:before {
             content: "";
@@ -359,12 +436,29 @@
             position: absolute;
             left: 0;
             top: 0;
+
+            @media #{$smallPhone} {
+                background-size: contain;
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 }
 
 .footer-develop {
     font-size: 12.4px;
+    flex-basis: 150px;
+
+    @media #{$phone} {
+        flex-basis: auto;
+        margin-left: auto;
+        margin-top: 10px;
+    }
+
+    @media #{$smallPhone} {
+        font-size: 10px;
+    }
 
     &__link {
         font-family: $font-opensans-bold;

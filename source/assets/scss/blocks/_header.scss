@@ -1,25 +1,55 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding-top: rem(84);
-    padding-bottom: rem(41);
+    padding-top: rem(34);
+    padding-bottom: rem(34);
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: rem(50);
+        padding-bottom: rem(41);
+
+        @media #{$phone} {
+            padding-left: ceil($grid-gutter-width / 2);
+            padding-right: floor($grid-gutter-width / 2);
+        }
+    }
 }
 
 .header-brand {
     display: inline-block;
     text-decoration: none;
+    
+    &__img {
+        @media #{$phone} {
+            max-width: 186px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            line-height: 0;
+        }
+    }
 
     &__title {
         color: #255f34;
         font-family: $font-opensans-bold;
         font-size: rem(21);
         padding-top: 2px;
+
+        @media #{$phone} {
+            font-size: 12px;
+        }
     }
 }
 
 .phone {
     color: #255f34;
     font-size: rem(24);
+
+    @media #{$phone} {
+        display: none;
+    }
 
     &__name {
         font-family: $font-opensans-light;

@@ -2,6 +2,10 @@
     display: flex;
     justify-content: space-between;
 
+    @media #{$phone} {
+        display: none;
+    }
+
     &__item.is-active &__link {
         color: #4f6d4b;
         font-family: $font-opensans-semibold;
