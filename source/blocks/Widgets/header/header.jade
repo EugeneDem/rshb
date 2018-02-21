@@ -5,10 +5,19 @@ header.header
 				.header-brand__img
 					img(src="assets/images/brand.jpg" alt="Россельхозбанк")
 				.header-brand__title Группа АО&nbsp;“Россельхозбанк”
-			.phone
-				.phone__name Бесплатный звонок по&nbsp;России
-				a.phone__number(href="callto:88007004560") 8 800 700 45 60
-		nav.navbar
-			each value, ind in HEADER.navbar
-				.navbar__item(class=(value.page === page) ? "is-active" : "")
-					a.navbar__link(href=value.url)!= value.title
+			.header__controls
+				.phone
+					.phone__name Бесплатный звонок по&nbsp;России
+					a.phone__number(href="callto:88007004560")
+						span.phone__number-icon
+							img(src="assets/images/icon-phone.svg")
+						span.phone__number-text 8 800 700 45 60
+				a.navbar-toggler(href="#" data-toggle-class="app-navbar-off" data-toggle-target="#app" data-toggle-click-outside="#navbar-collapse")
+					span.navbar-toggler__icon
+		nav.navbar#navbar-collapse
+			a.navbar__close(href="#" data-toggle-class="app-navbar-off" data-toggle-target="#app" data-toggle-click-outside="#navbar-collapse")
+				span.navbar__close-icon
+			.navbar__nav
+				each value, ind in HEADER.navbar
+					.navbar__item(class=(value.page === page) ? "is-active" : "")
+						a.navbar__link(href=value.url)!= value.title

@@ -1,52 +1,80 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
+    @media #{$tablet} {
+        padding: 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1001;
+        flex-direction: column;
+        background-color: #fff;
+        transition: transform 300ms ease 0s;
+        transform: translate3d(-100%, 0, 0);
 
-    @media #{$phone} {
+        .app-navbar-off & {
+            transition: transform 300ms ease 0s;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    &__close {
         display: none;
+        padding: rem(4) rem(4);
+        line-height: 1;
+        position: absolute;
+        top: rem(15);
+        right: rem(15);
+        z-index: 1;
+
+        @media #{$tablet} {
+            display: block;
+        }
+    }
+
+    &__close-icon {
+        background: url("icon-close-navbar.svg#datauri") no-repeat 0 0;
+        background-size: 100% 100%;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+
+        @media #{$tablet} {
+            flex-direction: column;
+        }
     }
 
     &__item.is-active &__link {
-        color: #4f6d4b;
+        color: #1f7d35;
         font-family: $font-opensans-semibold;
-
-        &:after {
-            width: 100%;
-            opacity: 1;
-            visibility: visible;
-        }
+        text-decoration: underline;
     }
 
     &__link {
         display: inline-block;
         color: #636363;
         font-size: rem(21);
-        text-decoration: none;
         position: relative;
+        transition: all 0.3s ease 0s;
+        text-decoration: none;
 
-        &:after {
-            width: 0;
-            height: 0;
-            border-top: 1px solid #4f6d4b;
-            content: "";
-            display: block;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease 0s;
-            position: absolute;
-            left: 0;
-            top: 100%;
-            margin-top: -2px;
+        @media #{$tablet} {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        @media #{$laptop} {
+            font-size: rem(19);
         }
 
         &:hover {
-            color: #4f6d4b;
-
-            &:after {
-                width: 100%;
-                opacity: 1;
-                visibility: visible;
-            }
+            color: #1f7d35;
+            text-decoration: underline;
         }
     }
 }

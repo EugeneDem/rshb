@@ -465,9 +465,25 @@ input::-ms-clear {
   justify-content: space-between;
 }
 
+.header__backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 600;
+  display: none;
+  padding-top: 400%;
+  background-color: rgba(99, 99, 99, 0.9);
+}
+
 .header-brand {
   display: inline-block;
   text-decoration: none;
+}
+
+.header-brand__img {
+  max-width: 23.875rem;
 }
 
 .header-brand__img img {
@@ -484,8 +500,10 @@ input::-ms-clear {
 }
 
 .phone {
+  display: inline-block;
   color: #255f34;
   font-size: 1.5rem;
+  transition: background-color 0.3s ease 0s;
 }
 
 .phone__name {
@@ -498,21 +516,90 @@ input::-ms-clear {
   font-family: "OpenSans-Bold";
 }
 
-.navbar {
+.phone__number-icon {
+  display: none;
+}
+
+.phone__number-icon img {
+  max-width: 100%;
+  height: auto;
+  line-height: 0;
+}
+
+.navbar-toggler {
+  display: none;
+  box-sizing: border-box;
+  width: 53px;
+  height: 53px;
+  border: 1px solid #255f34;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 48px;
+  transition: background-color 0.3s ease 0s;
+}
+
+.navbar-toggler:hover,.navbar-toggler.is-active {
+  background-color: #255f34;
+}
+
+.navbar-toggler__icon {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  background-color: #ffcb05;
+  vertical-align: middle;
+}
+
+.navbar-toggler__icon:before,.navbar-toggler__icon:after {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  background-color: #ffcb05;
+  content: "";
+}
+
+.navbar-toggler__icon:before {
+  top: -11px;
+}
+
+.navbar-toggler__icon:after {
+  bottom: -11px;
+}
+
+.navbar__close {
+  position: absolute;
+  top: 0.9375rem;
+  right: 0.9375rem;
+  z-index: 1;
+  display: none;
+  padding: 0.25rem 0.25rem;
+  line-height: 1;
+}
+
+.navbar__close-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTcuMSAxNy4xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNy4xIDE3LjEiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KCTxwb2x5Z29uIGZpbGw9IiMxZjdkMzUiIHBvaW50cz0iMTcuMSwwLjggMTYuMywwIDguNiw3LjcgMC44LDAgMCwwLjggNy43LDguNiAwLDE2LjMgMC44LDE3LjEgOC42LDkuNCAxNi4zLDE3LjEgMTcuMSwxNi4zIDkuNCw4LjYiLz4NCjwvc3ZnPg0K) no-repeat 0 0;
+  background-size: 100% 100%;
+  vertical-align: middle;
+}
+
+.navbar__nav {
   display: flex;
 
   justify-content: space-between;
 }
 
 .navbar__item.is-active .navbar__link {
-  color: #4f6d4b;
+  color: #1f7d35;
+  text-decoration: underline;
   font-family: "OpenSans-SemiBold";
-}
-
-.navbar__item.is-active .navbar__link:after {
-  visibility: visible;
-  width: 100%;
-  opacity: 1;
 }
 
 .navbar__link {
@@ -521,31 +608,12 @@ input::-ms-clear {
   color: #636363;
   text-decoration: none;
   font-size: 1.3125rem;
-}
-
-.navbar__link:after {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: block;
-  visibility: hidden;
-  margin-top: -2px;
-  width: 0;
-  height: 0;
-  border-top: 1px solid #4f6d4b;
-  content: "";
-  opacity: 0;
   transition: all 0.3s ease 0s;
 }
 
 .navbar__link:hover {
-  color: #4f6d4b;
-}
-
-.navbar__link:hover:after {
-  visibility: visible;
-  width: 100%;
-  opacity: 1;
+  color: #1f7d35;
+  text-decoration: underline;
 }
 
 .promo-text {
@@ -741,7 +809,9 @@ input::-ms-clear {
 }
 
 .promo-carousel .slick-dots {
-  bottom: 7px;
+  bottom: 20px;
+  left: 2.625rem;
+  text-align: left;
 }
 
 .promo-carousel .slick-dots li {
@@ -761,14 +831,23 @@ input::-ms-clear {
   box-sizing: border-box;
   width: 14px;
   height: 14px;
-  border: 2px solid #8c8e90;
+  border: 2px solid #fff;
   border-radius: 50%;
+  background-color: #255f34;
   content: "";
   opacity: 1;
 }
 
+.promo-carousel .slick-dots li button:hover {
+  opacity: 0.7;
+}
+
 .promo-carousel .slick-dots li.slick-active button:before {
-  background-color: #babcbe;
+  background-color: #ffcb05;
+}
+
+.promo-carousel .slick-dots li.slick-active button:hover {
+  opacity: 1;
 }
 
 .promo-carousel__media img {
@@ -1470,6 +1549,10 @@ input::-ms-clear {
   .grid__col-l-offset-12 {
     margin-left: 100%;
   }
+
+  .navbar__link {
+    font-size: 1.1875rem;
+  }
 }
 
 @media (max-width: 959px) {
@@ -1683,6 +1766,74 @@ input::-ms-clear {
 
   .grid__col-t-offset-12 {
     margin-left: 100%;
+  }
+
+  .header__content {
+    padding-bottom: 0;
+  }
+
+  .phone {
+    margin-right: 14px;
+  }
+
+  .phone:hover .phone__number-icon,.phone:focus .phone__number-icon {
+    background-color: #255f34;
+  }
+
+  .phone__name {
+    display: none;
+  }
+
+  .phone__number-icon {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 53px;
+    height: 53px;
+    border: 1px solid #255f34;
+    border-radius: 50%;
+    vertical-align: middle;
+    line-height: 48px;
+  }
+
+  .phone__number-text {
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1001;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #fff;
+    transition: transform 300ms ease 0s;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  .app-navbar-off .navbar {
+    transition: transform 300ms ease 0s;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .navbar__close {
+    display: block;
+  }
+
+  .navbar__nav {
+    flex-direction: column;
+  }
+
+  .navbar__link {
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   .promo-block__wrap-img {
@@ -1980,12 +2131,35 @@ input::-ms-clear {
     font-size: 12px;
   }
 
-  .phone {
-    display: none;
+  .phone__number-icon {
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
   }
 
-  .navbar {
-    display: none;
+  .navbar-toggler {
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
+  }
+
+  .navbar-toggler__icon {
+    width: 6px;
+    height: 6px;
+  }
+
+  .navbar-toggler__icon:before,.navbar-toggler__icon:after {
+    width: 6px;
+    height: 6px;
+  }
+
+  .navbar-toggler__icon:before {
+    top: -8px;
+  }
+
+  .navbar-toggler__icon:after {
+    bottom: -8px;
   }
 
   .promo-text__title {
@@ -2026,7 +2200,6 @@ input::-ms-clear {
   }
 
   .promo-carousel__content {
-    bottom: 1.25rem;
     padding-right: 15px;
     padding-left: 15px;
   }
