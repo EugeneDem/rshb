@@ -1,0 +1,10 @@
+#floating-nav.floating-nav
+	.floating-nav__toggler(href="#" data-toggle-class="app-sidebar-off" data-toggle-target="#app" data-toggle-click-outside="#floating-nav")
+	ul.floating-nav__list
+		each value, ind in FLOATINGNAV.sidebar
+			li.floating-nav__list-item
+				a.floating-nav-item(href="#")
+					.floating-nav-item__wrap-icon
+						.floating-nav-item__icon
+							img(src="")
+					.floating-nav-item__text!= value.title

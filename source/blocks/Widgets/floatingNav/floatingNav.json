@@ -1,0 +1,24 @@
+{
+    "sidebar": [
+        {
+            "url": "#",
+            "title": "Личный кабинет",
+            "page": "lk"
+        },
+        {
+            "url": "#",
+            "title": "Найти офис",
+            "page": "offices"
+        },
+        {
+            "url": "#",
+            "title": "Карта сайта",
+            "page": "sitemap"
+        },
+        {
+            "url": "#",
+            "title": "Наши партнеры",
+            "page": "partners"
+        }
+    ]
+}

@@ -1,4 +1,44 @@
 $sprites: (
+	"icon_floating-arrow-left": (
+		normal: (
+			x: 110,
+			y: 80,
+			width: 23,
+			height: 16,
+			image: "sprites.png",
+			total_width: 150,
+			total_height: 142,
+		),
+		retina: (
+			x: 220,
+			y: 160,
+			width: 46,
+			height: 32,
+			image: "sprites_2x.png",
+			total_width: 300,
+			total_height: 284,
+		),
+	),
+	"icon_floating-arrow-right": (
+		normal: (
+			x: 84,
+			y: 104,
+			width: 23,
+			height: 16,
+			image: "sprites.png",
+			total_width: 150,
+			total_height: 142,
+		),
+		retina: (
+			x: 168,
+			y: 208,
+			width: 46,
+			height: 32,
+			image: "sprites_2x.png",
+			total_width: 300,
+			total_height: 284,
+		),
+	),
 	"icon_services-call-hover-small": (
 		normal: (
 			x: 110,

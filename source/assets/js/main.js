@@ -39,13 +39,15 @@ let toggleClassOnElement = function() {
         typeof $this.attr('data-toggle-target') !== 'undefined' ? toggleElement = $($this.attr('data-toggle-target')) : toggleElement = $this;
 
         $this.on('click', function(e) {
-            if (!$('.navbar').next('.header__backdrop').length) {
-                $('<div class="header__backdrop"></div>').insertAfter($('.navbar'));
-                $('.header__backdrop').fadeIn(250);
-            } else {
-                $('.navbar').next('.header__backdrop').fadeOut(250).remove();
+            if ($this.hasClass('navbar-toggler') || $this.hasClass('navbar__close')) {
+                if (!$('.navbar').next('.header__backdrop').length) {
+                    $('<div class="header__backdrop"></div>').insertAfter($('.navbar'));
+                    $('.header__backdrop').fadeIn(250);
+                } else {
+                    $('.navbar').next('.header__backdrop').fadeOut(250).remove();
+                }
             }
-            
+
             if ($this.attr('data-toggle-type') !== 'undefined' && $this.attr('data-toggle-type') == 'on') {
                 toggleElement.addClass(toggleClass);
             } else if ($this.attr('data-toggle-type') !== 'undefined' && $this.attr('data-toggle-type') == 'off') {
@@ -86,7 +88,7 @@ let promoSlider = {
         }
     },
     init: () => {
-        let slider, width;
+        let width;
         if (promoSlider.slider.length) {
             width = ($('body').width() - 30 >= promoSlider.slider.closest('.wrapper').width()) ? promoSlider.slider.closest('.wrapper').width() : $('body').width() - 30;
             
@@ -94,19 +96,18 @@ let promoSlider = {
                 width = width + 30;
             }
             promoSlider.slider.parent().width(width);
-            slider = promoSlider.slider.slick(promoSlider.sliderSettings());
-        }
 
-        $(window).on('resize', function () {
-            if (promoSlider.slider.length) {
+            promoSlider.slider.slick(promoSlider.sliderSettings());
+
+            $(window).on('resize', function () {
                 width = ($('body').width() - 30 >= promoSlider.slider.closest('.wrapper').width()) ? promoSlider.slider.closest('.wrapper').width() : $('body').width() - 30;
 
                 if ($(window).width() <= 768) {
                     width = width + 30;
                 }
                 promoSlider.slider.parent().width(width);
-            }
-        });
+            });
+        }
     }
 };
 
