@@ -304,8 +304,6 @@ gulp.task('vendorjs', () => {
       paths.js+"/vendor/*.js",
       './node_modules/jquery/dist/jquery.js',
       './node_modules/slick-carousel/slick/slick.js',
-      './node_modules/photoswipe/dist/photoswipe.js',
-      './node_modules/photoswipe/dist/photoswipe-ui-default.js',
       './node_modules/svg4everybody/dist/svg4everybody.js'
     ])
     .pipe(gulp.dest(dest.js+"/vendor/"))

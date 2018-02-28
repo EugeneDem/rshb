@@ -93,6 +93,7 @@ var promoSlider = {
 	}
 };
 $(function() {
+	svg4everybody();
 	navbarHandler();
 	toggleClassOnElement();
 	promoSlider.init();
