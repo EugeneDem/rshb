@@ -3,6 +3,10 @@
     margin: rem(84) auto rem(80);
     text-align: center;
 
+    @media #{$phone} {
+        max-width: 480px;
+    }
+
     &__title {
         color: #499e2b;
         font-family: $font-opensans-bold;
@@ -111,9 +115,10 @@
         }
 
         &:after {
-            background: url("icon-arrow-big-white.png#datauri") no-repeat 50% 50%;
-            width: 120px;
-            height: 54px;
+            background: url("icon-arrow-white.svg#datauri") no-repeat 50% 50%;
+            background-size: contain;
+            width: rem(120);
+            height: rem(120);
             content: "";
             display: block;
             position: absolute;
@@ -123,6 +128,11 @@
             transform: translate(-50%, -50%);
             opacity: 0;
             visibility: hidden;
+
+            @media #{$phone} {
+                width: rem(90);
+                height: rem(90);
+            }
         }
     }
 
@@ -163,17 +173,21 @@
         background-color: #ffcb05;
         width: 44px;
         height: 44px;
+        text-align: center;
+        line-height: 40px;
         position: absolute;
         right: 0;
         top: 50%;
         margin-top: -22px;
 
         &:before {
-            background: url("icon-arrow-white.png#datauri") no-repeat 50% 50%;
-            width: 44px;
-            height: 44px;
+            background: url("icon-arrow-white.svg#datauri") no-repeat 50% 50%;
+            background-size: contain;
+            width: 28px;
+            height: 28px;
             content: "";
-            display: block;
+            display: inline-block;
+            vertical-align: middle;
         }
     }
 }

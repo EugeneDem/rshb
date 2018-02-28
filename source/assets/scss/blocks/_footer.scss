@@ -35,7 +35,11 @@
 
 .footer-list-group {
     @include clearfix();
-    flex-basis: 390px;
+    flex-basis: rem(390);
+
+    @media #{$tablet} {
+        flex-basis: rem(420);
+    }
 
     @media #{$phone} {
         flex-basis: auto;
@@ -64,10 +68,16 @@
 
 .services-list-group {
     display: flex;
-    justify-content: center;
     width: percentage(6 / 12);
+    padding-left: 8px;
+
+    @media #{$tablet} {
+        width: 40%;
+        padding-left: 0;
+    }
 
     @media #{$phone} {
+        justify-content: center;
         width: 100%;
         order: -1;
         margin-bottom: 20px;
@@ -108,36 +118,16 @@
         top: 50%;
     }
 
-    &__icon_call {
-        @include sprite("icon_services-call");
-
-        @media #{$tablet} {
-            @include sprite("icon_services-call-small");
-        }
+    &__icon-call,
+    &__icon-mail {
+        width: rem(56);
+        height: rem(56);
+        fill: #fff;
     }
 
-    &__icon_mail {
-        @include sprite("icon_services-mail");
-
-        @media #{$tablet} {
-            @include sprite("icon_services-mail-small");
-        }
-    }
-
-    &__wrap-icon:hover &__icon_call {
-        @include sprite("icon_services-call-hover");
-
-        @media #{$tablet} {
-            @include sprite("icon_services-call-hover-small");
-        }
-    }
-
-    &__wrap-icon:hover &__icon_mail {
-        @include sprite("icon_services-mail-hover");
-
-        @media #{$tablet} {
-            @include sprite("icon_services-mail-hover-small");
-        }
+    &__wrap-icon:hover &__icon-call,
+    &__wrap-icon:hover &__icon-mail {
+        fill: #4a9e2b;
     }
 
     &__name {
@@ -394,7 +384,8 @@
 
         &:before {
             content: "";
-            background: url("icon-map.png#datauri") no-repeat 0 0;
+            background: url("icon-map.svg#datauri") no-repeat 0 0;
+            background-size: contain;
             width: 36px;
             height: 36px;
             position: absolute;
@@ -402,7 +393,6 @@
             top: 0;
 
             @media #{$smallPhone} {
-                background-size: contain;
                 width: 28px;
                 height: 28px;
             }
@@ -430,7 +420,8 @@
 
         &:before {
             content: "";
-            background-image: url("icon-tree.png#datauri");
+            background-image: url("icon-sitemap.svg#datauri");
+            background-size: contain;
             width: 45px;
             height: 45px;
             position: absolute;
@@ -438,7 +429,6 @@
             top: 0;
 
             @media #{$smallPhone} {
-                background-size: contain;
                 width: 30px;
                 height: 30px;
             }

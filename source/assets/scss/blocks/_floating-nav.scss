@@ -42,16 +42,6 @@
             display: block;
         }
 
-        &:before {
-            content: "";
-            @include sprite("icon_floating-arrow-left");
-            display: block;
-            position: absolute;
-            left: 9px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
         &:after {
             background-color: rgba(#fff, 0.4);
             width: 1px;
@@ -62,11 +52,20 @@
             bottom: 0;
             right: -1px;
         }
+    }
+
+    &__toggler-icon {
+        fill: #101010;
+        width: 24px;
+        height: 24px;
+        display: block;
+        position: absolute;
+        left: 9px;
+        top: 50%;
+        transform: translate(0, -50%) rotate(180deg);
 
         .app-sidebar-off & {
-            &:before {
-                @include sprite("icon_floating-arrow-right");
-            }
+            transform: translateY(-50%);
         }
     }
 
@@ -112,6 +111,10 @@
         border-color: #1f7d35;
     }
 
+    &:hover &__img {
+        fill: #1f7d35;
+    }
+
     &__wrap-icon {
         @media screen and (max-width: 1440px) {
             flex-basis: 70px;
@@ -123,12 +126,17 @@
         border: 1px solid #000;
         width: 56px;
         height: 56px;
+        line-height: 50px;
         transition: all 0.3s ease 0s;
+        text-align: center;
+    }
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+    &__img {
+        width: 36px;
+        height: 36px;
+        fill: #000;
+        display: inline-block;
+        vertical-align: middle;
     }
 
     &__text {

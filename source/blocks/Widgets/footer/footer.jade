@@ -12,11 +12,13 @@ footer
 				.services-list-group
 					.services-item
 						a.services-item__wrap-icon(href="#")
-							span.services-item__icon.services-item__icon_call
+							span.services-item__icon
+								+svg("icon_phone").services-item__icon-call
 						p.services-item__name Позвоните нам
 					.services-item
 						a.services-item__wrap-icon(href="#")
-							span.services-item__icon.services-item__icon_mail
+							span.services-item__icon
+								+svg("icon_email").services-item__icon-mail
 						p.services-item__name Напишите нам
 				
 				.footer-social

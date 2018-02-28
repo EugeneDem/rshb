@@ -3,22 +3,26 @@
         {
             "url": "#",
             "title": "Личный кабинет",
-            "page": "lk"
+            "page": "lk",
+            "icon": "user"
         },
         {
             "url": "#",
             "title": "Найти офис",
-            "page": "offices"
+            "page": "offices",
+            "icon": "offices"
         },
         {
             "url": "#",
             "title": "Карта сайта",
-            "page": "sitemap"
+            "page": "sitemap",
+            "icon": "sitemap"
         },
         {
             "url": "#",
             "title": "Наши партнеры",
-            "page": "partners"
+            "page": "partners",
+            "icon": "partners"
         }
     ]
 }

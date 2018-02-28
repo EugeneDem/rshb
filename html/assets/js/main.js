@@ -77,14 +77,14 @@ var promoSlider = {
 		var width = void 0;
 		if (promoSlider.slider.length) {
 			width = $('body').width() - 30 >= promoSlider.slider.closest('.wrapper').width() ? promoSlider.slider.closest('.wrapper').width() : $('body').width() - 30;
-			if ($(window).width() <= 768) {
+			if ($(window).width() < 760) {
 				width = width + 30;
 			}
 			promoSlider.slider.parent().width(width);
 			promoSlider.slider.slick(promoSlider.sliderSettings());
 			$(window).on('resize', function() {
 				width = $('body').width() - 30 >= promoSlider.slider.closest('.wrapper').width() ? promoSlider.slider.closest('.wrapper').width() : $('body').width() - 30;
-				if ($(window).width() <= 768) {
+				if ($(window).width() < 760) {
 					width = width + 30;
 				}
 				promoSlider.slider.parent().width(width);
