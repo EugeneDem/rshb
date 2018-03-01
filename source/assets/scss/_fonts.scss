@@ -1,44 +1,26 @@
 @font-face {
-    font-family: $font-opensans;
-    src: url($font-path + $font-opensans + '.woff') format('woff'),
-         url($font-path + $font-opensans + '.ttf') format('truetype'),
-         url($font-path + $font-opensans + '.svg#' + $font-opensans) format('svg');
+    font-family: $font-proximanova;
+    src: url($font-path + $font-proximanova + '.woff') format('woff'),
+         url($font-path + $font-proximanova + '.ttf') format('truetype'),
+         url($font-path + $font-proximanova + '.svg#' + $font-proximanova) format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: $font-opensans-bold;
-    src: url($font-path + $font-opensans-bold + '.woff') format('woff'),
-         url($font-path + $font-opensans-bold + '.ttf') format('truetype'),
-         url($font-path + $font-opensans-bold + '.svg#'+$font-opensans+'-Bold') format('svg');
+    font-family: $font-proximanova-bold;
+    src: url($font-path + $font-proximanova-bold + '.woff') format('woff'),
+         url($font-path + $font-proximanova-bold + '.ttf') format('truetype'),
+         url($font-path + $font-proximanova-bold + '.svg#'+$font-proximanova+'-Bold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: $font-opensans-light;
-    src: url($font-path + $font-opensans-light + '.woff') format('woff'),
-         url($font-path + $font-opensans-light + '.ttf') format('truetype'),
-         url($font-path + $font-opensans-light + '.svg#'+$font-opensans+'-Light') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: $font-opensans-semibold;
-    src: url($font-path + $font-opensans-semibold + '.woff') format('woff'),
-         url($font-path + $font-opensans-semibold + '.ttf') format('truetype'),
-         url($font-path + $font-opensans-semibold + '.svg#'+$font-opensans+'-SemiBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: $font-opensans-extrabold;
-    src: url($font-path + $font-opensans-extrabold + '.woff') format('woff'),
-         url($font-path + $font-opensans-extrabold + '.ttf') format('truetype'),
-         url($font-path + $font-opensans-extrabold + '.svg#'+$font-opensans+'-ExtraBold') format('svg');
+    font-family: $font-proximanova-light;
+    src: url($font-path + $font-proximanova-light + '.woff') format('woff'),
+         url($font-path + $font-proximanova-light + '.ttf') format('truetype'),
+         url($font-path + $font-proximanova-light + '.svg#'+$font-proximanova+'-Light') format('svg');
     font-weight: normal;
     font-style: normal;
 }

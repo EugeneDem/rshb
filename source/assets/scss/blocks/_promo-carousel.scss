@@ -1,10 +1,6 @@
 .promo-carousel {
     width: 100%;
-
-    @media #{$phone} {
-        min-height: 198px;
-        height: 62vw;
-    }
+    height: rem(528);
 
     &__state {
         &.slick-slider.slick-dotted {
@@ -96,16 +92,22 @@
     }
 
     &__media {
-        img {
-            width: 100%;
-            height: auto;
-        }
+        background: none no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
     }
 
     &__item {
         display: inline-block;
         vertical-align: top;
         position: relative;
+        height: rem(528);
     }
 
     &__content {
@@ -115,6 +117,7 @@
         left: 0;
         right: 0;
         bottom: rem(55);
+        z-index: 1;
 
         @media #{$phone} {
             padding-left: ceil($grid-gutter-width / 2);
@@ -126,7 +129,7 @@
         max-width: 50%;
         font-size: rem(39);
         color: #fff;
-        font-family: $font-opensans-bold;
+        font-family: $font-proximanova-bold;
         position: relative;
         padding-left: rem(30);
 
@@ -158,7 +161,7 @@
         color: #000;
         line-height: rem(118);
         font-size: rem(24);
-        font-family: $font-opensans-light;
+        font-family: $font-proximanova-light;
         text-align: center;
         display: block;
         transition: all 0.3s ease 0s;
