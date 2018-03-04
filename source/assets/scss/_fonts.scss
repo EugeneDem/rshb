@@ -17,6 +17,15 @@
 }
 
 @font-face {
+    font-family: $font-proximanova-semibold;
+    src: url($font-path + $font-proximanova-semibold + '.woff') format('woff'),
+         url($font-path + $font-proximanova-semibold + '.ttf') format('truetype'),
+         url($font-path + $font-proximanova-semibold + '.svg#'+$font-proximanova+'-SemiBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: $font-proximanova-light;
     src: url($font-path + $font-proximanova-light + '.woff') format('woff'),
          url($font-path + $font-proximanova-light + '.ttf') format('truetype'),

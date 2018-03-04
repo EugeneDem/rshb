@@ -167,7 +167,7 @@
     &__title {
         color: #000;
         font-size: rem(14);
-        font-family: $font-proximanova-bold;
+        font-family: $font-proximanova-semibold;
 
         @media #{$smallPhone} {
             display: none;
@@ -365,7 +365,7 @@
     }
 
     b {
-        font-family: $font-proximanova-bold;
+        font-family: $font-proximanova-semibold;
     }
 }
 
@@ -423,7 +423,7 @@
     }
 
     &__address-link {
-        font-family: $font-proximanova-bold;
+        font-family: $font-proximanova-semibold;
         color: #245f34;
     }
 
@@ -478,7 +478,7 @@
     }
 
     &__link {
-        font-family: $font-proximanova-bold;
+        font-family: $font-proximanova-semibold;
     }
 
     a {

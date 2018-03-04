@@ -1,6 +1,6 @@
 .header {
     padding-top: rem(34);
-    padding-bottom: rem(34);
+    padding-bottom: rem(22);
 
     &__content {
         display: flex;
@@ -50,7 +50,7 @@
 
     &__title {
         color: #255f34;
-        font-family: $font-proximanova-bold;
+        font-family: $font-proximanova-semibold;
         font-size: rem(21);
         padding-top: 2px;
 

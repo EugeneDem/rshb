@@ -1,0 +1,66 @@
+block page
+	-var page = "main";
+
+extends ../blocks/layout/layout
+
+block content
+	.wrapper
+		ol.breadcrumb
+			li.breadcrumb__item
+				a(href="#") Главная
+			li.breadcrumb__item.active
+				span Инвестиционное страхование жизни
+		.section
+			h1.section__title Инвестиционное страхование жизни
+			.b-content
+				h2.b-content__title Название продукта
+				.grid
+					.grid__col-6.grid__col-t-12
+						.b-quote Гарантированный <b>возврат вложений</b> и&nbsp;возможность <b>получения дополнительного инвестиционного дохода</b> при наличии страховой защиты
+					.grid__col-6.grid__col-t-12
+						.b-list-title Мы предлагаем клиенту:
+						ul.b-list.b-list_styled
+							li.b-list__item сохранность 100% вложенных им&nbsp;средств;
+							li.b-list__item выбор стратегии для инвестирования части средств в&nbsp;рисковые инструменты с&nbsp;потенциально высокой доходностью, доступ к&nbsp;которым ограничен для частного инвестора, для получения дополнительного инвестиционного дохода;
+							li.b-list__item страховую защиту по&nbsp;рискам &laquo;Смерть по&nbsp;любой причине&raquo;, &laquo;Смерть в&nbsp;ДТП&raquo; и&nbsp;&laquo;Смерть от&nbsp;несчастного случая&raquo;.
+				.b-content__hr
+			.b-content
+				h2.b-content__title Стратегии
+				.b-scheme
+					.b-scheme__col.b-scheme__col_2
+						.b-scheme__wrap
+							.b-scheme__header
+								.b-list-title Глобальные облигации
+								ul.b-list.b-list_progress
+									li.b-list__item Стратегия позволяет инвестировать часть средств в&nbsp;облигации(наиболее надежные инструменты фондового рынка с&nbsp;фиксированным доходом) европейских компаний. Данил: идея, историческая доходность.
+									li.b-list__item Пример роста базового актива на&nbsp;основании стратегии &laquo;Глобальные облигации&raquo;. Базовый актив&nbsp;&mdash; индекс фонда облигаций &laquo;CS&nbsp;Stellar Fund&raquo;. Среднегодовая доходность индекса за&nbsp;5&nbsp;лет составляет 10,6% годовых.
+							.b-scheme__content
+								img.b-scheme__img(src="content/images/scheme-1.jpg" alt="Index Value Express Return")
+					.b-scheme__col.b-scheme__col_2
+						.b-scheme__wrap
+							.b-scheme__header
+								.b-list-title Цифровая экономика
+								ul.b-list.b-list_progress
+									li.b-list__item Стратегия позволяет инвестировать часть средств в&nbsp;акции высокотехнологичных компаний, занятых в&nbsp;разработке и&nbsp;производстве оборудования и&nbsp;программного обеспечения для виртуальной реальности.
+									li.b-list__item Многие инвестиционные аналитики твердо уверены, что рынок аппаратного и&nbsp;программного обеспечения для Виртуальной реальности в&nbsp;ближайшем будущем может увеличиться до&nbsp;текущих размеров рынка мобильных телефонов. Уже в&nbsp;настоящий момент, помимо игр и&nbsp;развлечений, технологии Виртуальной реальности активно используются для обучение пилотов авиакомпаний, хирургов, оказывают помощь ученым в&nbsp;решении сложных задач, например, таких как исследования структуры белка молекулы.
+							.b-scheme__content
+								img.b-scheme__img(src="content/images/scheme-2.jpg" alt="Virtual Reality Express Return")
+				.b-content__hr
+			.b-content
+				h2.b-content__title Преимущества инвестиционного страхования жизни
+				.grid
+					.grid__col-6.grid__col-t-12
+						ul.b-list.b-list_styled.b-list_bold
+							li.b-list__item Гарантия возврата вложенных средств;
+							li.b-list__item Возможность получения дополнительного дохода за&nbsp;счет инвестирования в&nbsp;рисковые зарубежные инструменты, недоступные частному российскому инвестору;
+							li.b-list__item Страховая защита в&nbsp;случае смерти по&nbsp;любой причине;
+							li.b-list__item Страховая защита в&nbsp;случае смерти в&nbsp;результате ДТП;
+							li.b-list__item Страховая защита в&nbsp;случае смерти от&nbsp;несчастного случая;
+					.grid__col-6.grid__col-t-12
+						ul.b-list.b-list_styled.b-list_bold
+							li.b-list__item Страховая выплата в&nbsp;размере до&nbsp;300% от&nbsp;суммы взноса (в&nbsp;случае смерти в&nbsp;результате ДТП);
+							li.b-list__item Возможность указания выгодоприобретателей по&nbsp;договору страхования, отличных от&nbsp;прямых наследников, и&nbsp;отсутствие необходимости вступления в&nbsp;наследство;
+							li.b-list__item Юридическая защита при имущественных спорах;
+							li.b-list__item Льготное налогообложение;
+							li.b-list__item Возможность получения налогового вычета при заключении полиса на&nbsp;срок от&nbsp;5&nbsp;лет.
+				.b-content__hr

@@ -8,6 +8,8 @@
 
 @include make-grid-columns;
 
+@include make-grid('');
+
 // Laptop 1200
 @media #{$laptop} {
     @include make-grid(l);
