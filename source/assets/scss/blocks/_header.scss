@@ -10,11 +10,6 @@
         @media #{$tablet} {
             padding-bottom: 0;
         }
-
-        @media #{$phone} {
-            padding-left: ceil($grid-gutter-width / 2);
-            padding-right: floor($grid-gutter-width / 2);
-        }
     }
 
     &__backdrop {

@@ -28,8 +28,10 @@
     padding-right: floor($grid-gutter-width / 2);
     box-sizing: border-box;
 
-    @media #{$phone} {
-        padding-left: 0;
-        padding-right: 0;
+    &_mob-nopad {
+        @media #{$phone} {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }

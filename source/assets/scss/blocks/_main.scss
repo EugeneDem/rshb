@@ -18,11 +18,11 @@
     }
 
     &__subtitle {
-        font-family: $font-proximanova-bold;
+        font-family: $font-proximanova-semibold;
         line-height: 1.5;
 
         @media #{$phone} {
-            font-size: rem(18);
+            font-size: rem(20);
         }
     }
 }
