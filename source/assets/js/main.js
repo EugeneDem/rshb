@@ -116,4 +116,22 @@ $(function () {
     navbarHandler();
     toggleClassOnElement();
     promoSlider.init();
+
+    $('.js-office-link').unbind();
+    $('.js-office-link').on('click', function (e) {
+        var $this = $(this);
+        e.preventDefault();
+        //$(this).closest('.b-office').toggleClass('b-office_open');
+        if($this.closest('.b-office').is('.is-open')){
+            $this.addClass('is-open');
+            $this.closest('.b-office').find('.b-office-full').slideUp(function () {
+                $this.closest('.b-office').removeClass('is-open');
+            });
+        } else {
+            $this.removeClass('is-open');
+            $this.closest('.b-office').find('.b-office-full').slideDown(function () {
+                $this.closest('.b-office').addClass('is-open');
+            });
+        }
+    });
 });

@@ -790,12 +790,12 @@ input::-ms-clear {
 }
 
 .breadcrumb a {
-  color: #255f34;
+  color: #898989;
   text-decoration: none;
 }
 
 .breadcrumb > .active {
-  color: #898989;
+  color: #255f34;
 }
 
 .breadcrumb > li {
@@ -804,7 +804,7 @@ input::-ms-clear {
 
 .breadcrumb > li + li:before {
   padding: 0 5px;
-  color: #898989;
+  color: #255f34;
   content: "/\00a0";
 }
 
@@ -1073,7 +1073,7 @@ input::-ms-clear {
   border-radius: 50%;
   background-color: #ffcb05;
   text-align: center;
-  line-height: 40px;
+  line-height: 38px;
 }
 
 .promo-block__link-arrow:before {
@@ -1317,6 +1317,12 @@ input::-ms-clear {
   line-height: 3.125rem;
 }
 
+.b-content__subtitle {
+  color: #499e2b;
+  font-size: 2.25rem;
+  font-family: "Proximanova-SemiBold";
+}
+
 .b-content__hr {
   margin-top: 3.375rem;
   width: 100%;
@@ -1326,12 +1332,6 @@ input::-ms-clear {
 
 .b-content + .b-content {
   margin-top: 4.625rem;
-}
-
-.b-list-title {
-  color: #499e2b;
-  font-size: 2.25rem;
-  font-family: "Proximanova-Bold";
 }
 
 .b-list {
@@ -1440,6 +1440,192 @@ input::-ms-clear {
 .b-scheme__img {
   max-width: 100%;
   height: auto;
+}
+
+.b-office__header {
+  margin-bottom: 1.875rem;
+}
+
+.b-office__text {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+
+.b-office__contacts {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+
+.b-office__contacts-title {
+  margin-bottom: 0.6875rem;
+  font-family: "Proximanova-Bold";
+}
+
+.b-office__contacts-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Proximanova-Light";
+}
+
+.b-office__services {
+  margin-top: 2.875rem;
+  margin-bottom: 2.5625rem;
+}
+
+.b-office__services-item {
+  position: relative;
+  margin-bottom: 0.875rem;
+  padding-left: 4.0625rem;
+  min-height: 2.5rem;
+}
+
+.b-office__services-item-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #499e2b;
+  border-radius: 50%;
+}
+
+.b-office__services-item-name {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 2.5rem;
+}
+
+.b-office__services-item-icon-call,.b-office__services-item-icon-mail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: translate(-50%, -50%);
+}
+
+.b-office__services-item-icon-call {
+  fill: #2e8d50;
+}
+
+.b-office__services-item-icon-mail {
+  fill: #6aaf51;
+}
+
+.b-office .b-office-full {
+  display: none;
+}
+
+.b-office.is-open .b-office-full {
+  display: block;
+}
+
+.b-office + .b-office {
+  padding-top: 1rem;
+  border-top: 1px solid #e2e2e2;
+}
+
+.b-office.is-open + .b-office {
+  margin-top: 1.875rem;
+}
+
+.b-office-link {
+  position: relative;
+  display: inline-block;
+  margin-top: 1.875rem;
+  padding-right: 4rem;
+  color: #7d7d7d;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: "Proximanova-Light";
+}
+
+.b-office-link__icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -1.375rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background-color: #ffcb05;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.b-office-link__icon:before {
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTYuNjlweCIgaGVpZ2h0PSI1Ni42OXB4IiB2aWV3Qm94PSIwIDAgNTYuNjkgNTYuNjkiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDU2LjY5IDU2LjY5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCgk8cG9seWdvbiBmaWxsPSIjZmZmZmZmIiBwb2ludHM9IjQzLjY0NiwxMS4wNjQgMzkuOTgxLDExLjA2NCA0OS40MTksMjcuNDE0IDM0LjI5NiwyNy40MTQgNi4yNzEsMjcuNDE0IDYuMjcxLDMwLjU4NiAzNC4yOTYsMzAuNTg2IDQ5LjQxOSwzMC41ODYgMzkuOTgxLDQ2LjkzNiA0My42NDYsNDYuOTM2IDU0LDI5ICIvPg0KPC9zdmc+DQo=) no-repeat 50% 50%;
+  background-size: contain;
+  content: "";
+  vertical-align: middle;
+  transition: all 0.3s ease 0s;
+  transform: rotate(-90deg);
+}
+
+.b-office-link.is-open .b-office-link__icon:before {
+  transform: rotate(90deg);
+}
+
+.b-office-target {
+  position: relative;
+  display: inline-block;
+  margin-top: 3.375rem;
+  margin-bottom: 1.875rem;
+  padding-right: 6.125rem;
+  color: #1c8341;
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-family: "Proximanova-Bold";
+}
+
+.b-office-target__icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -1.375rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background-color: #ffcb05;
+  text-align: center;
+}
+
+.b-office-target__icon:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTYuNjlweCIgaGVpZ2h0PSI1Ni42OXB4IiB2aWV3Qm94PSIwIDAgNTYuNjkgNTYuNjkiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDU2LjY5IDU2LjY5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCgk8cG9seWdvbiBmaWxsPSIjZmZmZmZmIiBwb2ludHM9IjQzLjY0NiwxMS4wNjQgMzkuOTgxLDExLjA2NCA0OS40MTksMjcuNDE0IDM0LjI5NiwyNy40MTQgNi4yNzEsMjcuNDE0IDYuMjcxLDMwLjU4NiAzNC4yOTYsMzAuNTg2IDQ5LjQxOSwzMC41ODYgMzkuOTgxLDQ2LjkzNiA0My42NDYsNDYuOTM2IDU0LDI5ICIvPg0KPC9zdmc+DQo=) no-repeat 50% 50%;
+  background-size: contain;
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+.b-office-full__picture {
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 72%;
+  min-height: 250px;
+  width: 100%;
+  border: 1px solid #c4dc82;
+}
+
+.b-office-full__map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .footer {
@@ -2721,6 +2907,21 @@ input::-ms-clear {
 
   .b-scheme {
     flex-wrap: wrap;
+  }
+
+  .b-office-target {
+    margin-top: 0;
+    padding-right: 4.25rem;
+    font-size: 1.5rem;
+  }
+
+  .b-office-full__content {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+
+  .b-office-full__picture {
+    padding-bottom: 60%;
   }
 
   .footer {

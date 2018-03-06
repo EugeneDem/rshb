@@ -1,0 +1,52 @@
+block page
+	-var page = "contacts";
+
+extends ../blocks/layout/layout
+
+//- block scripts
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	script(src="assets/js/offices.js")
+
+block content
+	.wrapper
+		ol.breadcrumb
+			li.breadcrumb__item
+				a(href="#") Главная
+			li.breadcrumb__item
+				a(href="#") О&nbsp;компании
+			li.breadcrumb__item.active
+				span Контакты
+		.section
+			h1.section__title Контакты
+			.b-content
+				.b-office.is-open
+					.b-office__header
+						.b-content__subtitle Центральный офис (Москва)
+					.b-office-full
+						.grid
+							.grid__col-7.grid__col-p-12.grid__col-push-5.grid__col-p-push-0
+								.b-office-full__picture
+									.b-office-full__map.js-office-map(data-itemid="1010" data-center="53.29679, 34.309428")
+							.grid__col-5.grid__col-p-12.grid__col-pull-7.grid__col-p-pull-0
+								.b-office-full__content
+									.b-office__text 119034, г. Москва,<br />Гагаринский переулок, дом&nbsp;3<br />(ст. метро &laquo;Кропоткинская&raquo;)
+									.b-office__services
+										.b-office__services-item
+											.b-office__services-item-icon
+												+svg("icon_phone").b-office__services-item-icon-call
+											.b-office__services-item-name Тел: 8 (800) 700 45 60
+										.b-office__services-item
+											.b-office__services-item-icon
+												+svg("icon_email").b-office__services-item-icon-mail
+											.b-office__services-item-name e-mail: info@rshbins-life.ru
+									.b-office__contacts
+										.b-office__contacts-title Время работы:
+										ul.b-office__contacts-list
+											li.b-office__contacts-list пн.-чт.&nbsp;9.00-18.00
+											li.b-office__contacts-list пт.&nbsp;9.00-16.45
+											li.b-office__contacts-list сб.-вс. выходной
+						.grid
+							.grid__col-7.grid__col-t-12.grid__col-offset-5.grid__col-t-offset-0
+								a.b-office-target(href="#") Найти ближайший офис
+									span.b-office-target__icon
+				.b-content__hr

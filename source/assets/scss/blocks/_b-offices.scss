@@ -1,0 +1,207 @@
+.b-office {
+    &__header {
+        margin-bottom: rem(30);
+    }
+
+    &__text {
+        font-size: rem(24);
+        line-height: rem(36);
+    }
+
+    &__contacts {
+        font-size: rem(24);
+        line-height: rem(36);
+    }
+    
+    &__contacts-title {
+        font-family: $font-proximanova-bold;
+        margin-bottom: rem(11);
+    }
+
+    &__contacts-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: $font-proximanova-light;
+    }
+
+    &__services {
+        margin-top: rem(46);
+        margin-bottom: rem(41);
+    }
+
+    &__services-item {
+        position: relative;
+        padding-left: rem(65);
+        min-height: rem(40);
+        margin-bottom: rem(14);
+    }
+
+    &__services-item-icon {
+        border: 1px solid #499e2b;
+        border-radius: 50%;
+        width: rem(40);
+        height: rem(40);
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__services-item-name {
+        font-size: rem(16);
+        line-height: rem(40);
+        text-transform: uppercase;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__services-item-icon-call,
+    &__services-item-icon-mail {
+        width: rem(24);
+        height: rem(24);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__services-item-icon-call {
+        fill: #2e8d50;
+    }
+
+    &__services-item-icon-mail {
+        fill: #6aaf51;
+    }
+
+    .b-office-full {
+        display: none;
+    }
+
+    &.is-open .b-office-full {
+        display: block;
+    }
+
+    &+ .b-office {
+        border-top: 1px solid #e2e2e2;
+        padding-top: rem(16);
+    }
+
+    &.is-open + .b-office {
+        margin-top: rem(30);
+    }
+}
+
+.b-office-link {
+    font-size: rem(32);
+    font-family: $font-proximanova-light;
+    color: #7d7d7d;
+    padding-right: rem(64);
+    position: relative;
+    display: inline-block;
+    margin-top: rem(30);
+    text-decoration: none;
+
+    &__icon {
+        border-radius: 50%;
+        width: rem(44);
+        height: rem(44);
+        background-color: #ffcb05;
+        text-align: center;
+        line-height: rem(32);
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -1* rem(22);
+
+        &:before {
+            background: url("icon-arrow-white.svg#datauri") no-repeat 50% 50%;
+            background-size: contain;
+            width: rem(28);
+            height: rem(28);
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            transition: all 0.3s ease 0s;
+            transform: rotate(-90deg);
+        }
+    }
+
+    &.is-open &__icon:before {
+        transform: rotate(90deg);
+    }
+}
+
+.b-office-target {
+    font-size: rem(28);
+    font-family: $font-proximanova-bold;
+    color: #1c8341;
+    padding-right: rem(98);
+    position: relative;
+    display: inline-block;
+    margin-top: rem(54);
+    margin-bottom: rem(30);
+    text-decoration: none;
+
+    @media #{$phone} {
+        font-size: rem(24);
+        padding-right: rem(68);
+        margin-top: 0;
+    }
+
+    &__icon {
+        border-radius: 50%;
+        width: rem(44);
+        height: rem(44);
+        background-color: #ffcb05;
+        text-align: center;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -1* rem(22);
+
+        &:before {
+            background: url("icon-arrow-white.svg#datauri") no-repeat 50% 50%;
+            background-size: contain;
+            width: rem(28);
+            height: rem(28);
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.b-office-full {
+    &__content {
+        @media #{$phone} {
+            padding-top: rem(30);
+            padding-bottom: rem(30);
+        }
+    }
+
+    &__picture {
+        border: 1px solid #c4dc82;
+        width: 100%;
+        position: relative;
+        padding-bottom: 72%;
+        box-sizing: border-box;
+        min-height: 250px;
+
+        @media #{$phone} {
+            padding-bottom: 60%;
+        }
+    }
+
+    &__map {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}

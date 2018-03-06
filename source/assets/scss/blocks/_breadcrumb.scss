@@ -5,12 +5,12 @@
     font-size: rem(20);
 
     a {
-        color: #255f34;
+        color: #898989;
         text-decoration: none;
     }
 
     > .active {
-        color: #898989;
+        color: #255f34;
     }
 
     > li {
@@ -18,7 +18,7 @@
 
         & + li:before {
             padding: 0 5px;
-            color: #898989;
+            color: #255f34;
             content: "/\00a0";
         }
     }
